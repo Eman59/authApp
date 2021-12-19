@@ -2,7 +2,7 @@
     font-size: 2rem !important;
 }
 
-.nav-link{
+.navLink{
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
 }

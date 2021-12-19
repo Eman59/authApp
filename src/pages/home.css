@@ -1,0 +1,10 @@
+.sub-head{
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.text-wrap{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}

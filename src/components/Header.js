@@ -9,6 +9,8 @@ import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import "./headerStyles.css";
 import { Route, Switch, Link } from 'react-router-dom';
 import LoginPage from '../pages/LoginPage';
+import Home from '../pages/Home';
+import SignUp from '../pages/SignUp';
 
 export default function ButtonAppBar() {
   const handleAuth = () => {
@@ -25,12 +27,15 @@ export default function ButtonAppBar() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} >
                 Guest
             </Typography>
-            <Link to="/login" className="nav-link" onClick={handleAuth}><Button color="inherit">Login</Button></Link>
+            <Link to="/" className="navLink" onClick={handleAuth}><Button color="inherit">Home</Button></Link>
+            <Link to="/login" className="navLink" onClick={handleAuth}><Button color="inherit">Login</Button></Link>
             </Toolbar>
         </AppBar>
       </Box>
       <Switch>
-        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={LoginPage}/>
+        <Route path="/signup" component={SignUp}/>
       </Switch>
     </>
   );
